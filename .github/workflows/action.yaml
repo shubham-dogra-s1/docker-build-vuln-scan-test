@@ -37,6 +37,10 @@ jobs:
         python -m pip install --upgrade pip
         sudo pip install s1-cns-cli
 
+    - name: Run Docker commands
+      run: |
+        docker images
+
     - name: Configure SentinelOne CNS CLI
       run: sudo s1-cns-cli config --api-token $TOKEN
       env:

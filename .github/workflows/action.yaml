@@ -47,6 +47,6 @@ jobs:
          TOKEN: ${{secrets.SENTINELONE_CNS_TOKEN}}
 
     - name: Run Vuln Scanner
-      run:  sudo s1-cns-cli --output-format SARIF --output-file vuln.sarif scan vuln --docker-image test:v1
+      run:  sudo s1-cns-cli --output-format SARIF --output-file vuln.sarif scan vuln --docker-image test:v1 --platform linux/amd64
 
   
